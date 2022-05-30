@@ -68,11 +68,9 @@ void proses() {
       fix = datafix / 20;
       //        kalibrasi = (fix - 1022.1) / 0.0967;
       kalibrasi = fix - 10.21;
-      //              kalibrasi = (fix - 10.21) * 1.8;
+      //        kalibrasi = (fix - 10.21) * 1.8;
 
       Serial.println("Datafix, Fix dan Kalibrasi:      ");
-      //            Serial.println(datafix);
-      //            Serial.println(fix);
       Serial.println(kalibrasi);
 
       printLCD(2);
@@ -106,8 +104,6 @@ void printLCD(int text) {
     lcd.setCursor(0, 5);
     lcd.print("TO START        ");
   } else if (text == 2) {
-    // lcd.setCursor(0, 0);
-    // lcd.print("KADAR Gula Darah");
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("ADC= ");
